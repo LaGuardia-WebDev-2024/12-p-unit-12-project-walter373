@@ -13,7 +13,6 @@ Select ONE Additional
 [ no ] Feature 5 - Use .append() method
 -->
 
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,28 +24,35 @@ Select ONE Additional
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+    <h1>My Top 3 Memories of <span id="cuh">This Year</span></h1>
     <ol>
       <li>
         <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <p class="domo"> More about this memory.</p>
+        <img
+        src="https://media.gettyimages.com/id/112261093/photo/aerial-of-jaco-costa-rica.jpg?s=612x612&w=gi&k=20&c=-iUSq5ku6KeVNGNtJc2oxmvH5zdiOBSC4uLDfdkEvgU="
       </li>
 
       <li>
         <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <p class="domo">More about this memory.</p>
+        <img
+        src="https://media.gettyimages.com/id/1162987349/photo/group-of-friends-having-fun.jpg?s=612x612&w=gi&k=20&c=QBd_yDrYDZZVpPCUbiVY-_fL3rfd1OCiwF6yeKBMoQw="
       </li>
 
       <li>
         <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <p class="domo">More about this memory</p>
+        <img
+        src="https://media.gettyimages.com/id/663751497/photo/lifeguard-chair-on-beach-montauk-east-hampton-new-york-state-usa.jpg?s=612x612&w=gi&k=20&c=qoJ2hGAa8r4kHmfNF9iUHp8M8Xya0wDSEN9f-q1vBOE=">
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $("img").hide();
       $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+
       });
 
       $("#mem2-button").click(function () {
@@ -56,6 +62,14 @@ Select ONE Additional
       $("#mem3-button").click(function () {
         $("#mem3").css("color", "green");
       });
+
+        $("#mem1").mouseover(function(){
+                       $("img").show();
+             $("#mem1").css("color", "purple");              
+        });
+      $(".domo").text("This is one of my fondest memories. Me and unamed persons enjoyed ourselves very much at this specific locale.")
+      $("h1").html("<u>A peak into my brain</u> <span id=cuh>This Year</span>")
+     $("#cuh").html("<u>this year</u>")
     </script>
   </body>
 </html>

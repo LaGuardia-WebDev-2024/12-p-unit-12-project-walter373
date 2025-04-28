@@ -5,10 +5,20 @@ html {
   padding-left: 20px;
 }
 
-img{
+img {
   border-radius: 30px;
+  border: 10px dashed grey;
+  opacity: 0.5;
 }
 
 h1 {
   font-family: "Poetsen One", sans-serif;
+}
+
+body {
+  background-color: pink;
+  text-align: center;
+}
+h1 {
+  font-family: italic;
 }
